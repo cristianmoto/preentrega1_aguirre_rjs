@@ -1,12 +1,18 @@
+import { Link } from "react-router-dom";
 
-
-export const Item = ({titulo, text}) => {
-  return (
-   <article className=' bg-gray-300 m-10  w-[250px] h-[162px] p-3 align-text 	rounded-lg flex justify-center'>
-   <h1 className="font-bold mb-[18px] ">{titulo}</h1>
-    <h2 className=' text-gray-500 font-semibold'>{text}</h2>
-   </article>
-  )
+const Item = ({item}) => {
+    return (
+        <div className="  bg-slate-300 col-md-3 text-center">
+            <Link to={"/item/" + item.id} className="text-decoration-none">
+                <div className="card border-0">
+                    <img src={item.pic} className="img-fluid" alt={item.nombre} />
+                    <div className="card-body">
+                        <p className="card-text small text-uppercase">{item.marca}<br /><span className="card-text fs-5"><b>${item.precio}</b></span></p>
+                    </div>
+                </div>
+            </Link>
+        </div>
+    )
 }
 
-
+export default Item;

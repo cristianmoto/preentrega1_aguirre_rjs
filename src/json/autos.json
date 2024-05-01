@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1",
+    "marca": "Citroen",
+    "modelo": "C4 Cactus 1.6 THP ",
+    "categoria": "SUV",
+    "estado": "usado",
+    "año": "2019",
+    "km": "64429",
+    "pic": "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMzE0NjI5L0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNzE0NDk0Mjk0MTY4LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0",
+    "precio": "18.000.000",
+    "stock":"1"
+  },
+  {
+    "id": "2",
+    "marca": "Volkswagen",
+    "modelo": "Nivus 1.0 TSI",
+    "categoria": "SUV",
+    "estado": "usado",
+    "año": "2022",
+    "km": "23138",
+    "pic": "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMzE0Mzg0L0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNzE0MzkwODAwNzU4LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0",
+    "precio": "23.000.000",
+    "stock":"2"
+  },
+  {
+    "id": "3",
+    "marca": "Jeep",
+    "modelo": "Renegade 1.8  AT 4x2",
+    "categoria": "SUV",
+    "estado": "usado",
+    "año": "2022",
+    "km": "97738",
+    "pic": "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMzE0Mzc3L0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNzE0MjE3NDY2OTg3LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0",
+    "precio": "21.000.000",
+    "stock":"3"
+  },
+  {
+    "id": "4",
+    "marca": "Chevrolet",
+    "modelo": "Cruze li 1.4 Sedan LT",
+    "categoria": "SEDAN",
+    "estado": "usado",
+    "año": "2022",
+    "km": "13650",
+    "pic": "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMzE0OTczL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNzE0NDA3MTkyNTY0LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0",
+    "precio": "11.500.000",
+    "stock":"2"
+  },
+  {
+    "id": "5",
+    "marca": "Fiat",
+    "modelo": "Tipo 1.6 ETORQ Easy ",
+    "categoria": "SEDAN",
+    "estado": "usado",
+    "año": "2018",
+    "km": "41.477",
+    "pic": "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMzE0MjI4L0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNzE0Mzg5MTEwOTc4LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0",
+    "precio": "18.700.000",
+    "stock":"1"
+  },
+  {
+    "id": "6",
+    "marca": "Fiat",
+    "modelo": "Cronos 1.3 PRECISION CVT ",
+    "categoria": "SEDAN",
+    "estado": "usado",
+    "año": "2023",
+    "km": "41.899",
+    "pic": "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMzE0NTY2L0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNzE0NDg3NTQxNTA2LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0",
+    "precio": "15.900.000",
+    "stock":"4"
+  },
+  {
+    "id": "7",
+    "marca": "Toyota",
+    "modelo": "Hilux 2.8 CD SR 177CV",
+    "categoria": "PickUp",
+    "estado": "usado",
+    "año": "2020",
+    "km": "4.000",
+    "pic": "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMzEyOTgyL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNzEzNTQ0ODQyNzY4LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0",
+    "precio": "21.900.000",
+    "stock":"3"
+  },
+  {
+    "id": "8",
+    "marca": "Volkswagen",
+    "modelo": "Amarok 2.0 TDI 140 TRENDLINE",
+    "categoria": "PickUp",
+    "estado": "usado",
+    "año": "2022",
+    "km": "36.041",
+    "pic": "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMzEyNzI4L0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNzEzNDQzNjkxMzUxLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0",
+    "precio": "28.900.000",
+    "stock":"1"
+  },
+  {
+    "id": "9",
+    "marca": "Reanult",
+    "modelo": "Alaskan 2.3 TURBO COMFORT 4x2",
+    "categoria": "PickUp",
+    "estado": "usado",
+    "año": "2023",
+    "km": "1.115",
+    "pic": "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMzEyNjM2L0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNzEzMjg3MzgwOTEwLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0",
+    "precio": "25.600.000",
+    "stock":"3"
+  }
+]
