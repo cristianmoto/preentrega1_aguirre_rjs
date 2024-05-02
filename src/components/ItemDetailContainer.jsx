@@ -12,7 +12,7 @@ export const ItemDetailContainer = () => {
     useEffect(() => {
       const promesa = new Promise(resolve => {
           setTimeout(() => {
-        const producto = autos.find(item => item.id === parseInt(id));
+        const producto = autos.find(item => item.id == id);
         resolve(producto);
       }, 500);
     });
@@ -21,7 +21,7 @@ export const ItemDetailContainer = () => {
   })
 }, [id])
   return (
-    <div className="grid grid-cols-2">
+    <div className="flex gap-2 m-2  bg-slate-300 rounded-md  container mx-auto">
       <div>
         <div>
           <ItemDetail item={item} />
