@@ -55,7 +55,7 @@ const Checkout = () => {
             {!orderId ? 
             <div className="p-3">
                 <div className=" ">
-                    <form className="flex justify-between align-middle">
+                    <form className="flex justify-between align-middle ">
                         <div className="px-2 align-middle text-center ">
                             <label className="text-3xl px-6 pl-0">Nombre: </label>
                             <input type="text" className="form-control " onInput={(e) => {setNombre(e.target.value)}} />
@@ -72,20 +72,20 @@ const Checkout = () => {
                         <button type="button" className=" bg-slate-900 rounded-lg text-white  flex-none  align-baseline text-end text-3xl px-6" onClick={generarOrden}>Generar Orden</button>
                     </form>
                 </div>
-                <div className="w-full">
+                <div className="w-full flex sm:flex-none">
                     <table className="container mx-auto bg-slate-200 p-10 rounded-lg my-5">
                         <tbody>
                             {cart.map(item => (
                                 <tr key={item.id} className=" container mx-auto justify-center">
-                                    <td className="text-3xl px-6 pl-0 py-4"><img src={item.pic} alt={item.modelo} width={200} /></td>
-                                    <td className="text-3xl px-6 pl-0">{item.modelo}</td>
-                                    <td className="text-3xl px-6 pl-0">x{item.quantity}</td>
-                                    <td className="text-3xl px-6 pl-0">${item.precio}</td>
+                                    <td className="text-xl px-6 pl-0 py-4 sm:text-3xl"><img src={item.pic} alt={item.modelo} width={200} /></td>
+                                    <td className="text-xl px-6 pl-0 sm:text-3xl">{item.modelo}</td>
+                                    <td className="text-xl px-6 pl-0 sm:text-3xl">x{item.quantity}</td>
+                                    <td className="text-xl px-6 pl-0 sm:text-3xl">${item.precio}</td>
                                 </tr>
                             ))}
                             <tr className="text-center justify-between">
-                                <td colSpan={2} className="text-end text-3xl px-6 "><b>Total</b></td>
-                                <td className="text-end text-3xl px-6  "><b>-${getSumProducts()}-</b></td>
+                                <td colSpan={2} className="ttext-xl px-6 pl-0 sm:text-3xl"><b>Total</b></td>
+                                <td className="text-xl px-6 pl-0 sm:text-3xl"><b>-${getSumProducts()}-</b></td>
                             </tr>
                         </tbody>
                     </table>
