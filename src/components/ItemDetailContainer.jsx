@@ -1,32 +1,33 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import autos from "../json/autos.json";
 import { ItemDetail } from "./ItemDetail";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
+import Loading from "./Loading";
 
-
-export const ItemDetailContainer = () => {
-
-   const [item, setItem] = useState([]);
+const ItemDetailContainer = () => {
+    const [item, setItem] = useState([]);
+    const [visible, setVisible] = useState(true);
     const {id} = useParams();
 
+    
     useEffect(() => {
-      const promesa = new Promise(resolve => {
-          setTimeout(() => {
-        const producto = autos.find(item => item.id == id);
-        resolve(producto);
-      }, 500);
-    });
-    promesa.then(respuesta => {
-      setItem(respuesta);
-  })
-}, [id])
+        const db = getFirestore();
+        const docRef = doc(db, "autos", id);
+        getDoc(docRef).then(snapShot => {
+            if (snapShot.exists()) {
+                setItem({id:snapShot.id, ...snapShot.data()});
+                setVisible(false);
+            }
+        });
+    }, [id]);
   return (
     <div className="flex gap-2 m-2  bg-slate-300 rounded-md  container mx-auto">
       <div>
         <div>
-          <ItemDetail item={item} />
+        {visible ? <Loading /> : <ItemDetail item={item} />}
         </div>
       </div>
     </div>
   );
 };
+export default ItemDetailContainer;

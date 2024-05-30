@@ -1,33 +1,34 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-
-
-export const ItemCount = ({stock}) => {
+const ItemCount = ({stock, onAdd}) => { //10
     const [contador, setContador] = useState(1);
     const [itemStock, setItemStock] = useState(stock);
+    const [visible, setVisible] = useState(true);
 
-    const incrementar =()=>{
-        if(contador < itemStock){
-            setContador(contador+1);
-        }
-    }
-    const decrementar =()=>{
-        if(contador > 1){
-            setContador(contador-1);
+    const incrementar = () => {
+        if (contador < itemStock) {
+            setContador(contador + 1);
         }
     }
 
-    const onAdd = () =>{
-        if (contador <= itemStock){
-            setItemStock (itemStock - contador);
+    const decrementar = () => {
+        if (contador > 1) {
+            setContador(contador - 1);
+        }
+    }
+
+    const addToCart = () => {
+        if (contador <= itemStock) {
+            setItemStock(itemStock - contador);
+            onAdd(contador);
             setContador(1);
-            console.log("agregaste " + contador + "autos");
+            setVisible(false);
         }
     }
 
-
-    useEffect(()=>{
-        setItemStock(stock)
+    useEffect(() => {
+        setItemStock(stock);
     }, [stock])
 
   return (
@@ -45,8 +46,9 @@ export const ItemCount = ({stock}) => {
         </div>
     </div>
     <div>
-    <button type="button" className="text-white ml-5  bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 uppercase" onClick={onAdd}>Agregar</button>
+    {visible?<button type="button" className="text-white ml-5  bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 uppercase" onClick={addToCart}>Agregar</button>:<Link  to={"/cart"} type="button" className="text-white ml-5  bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 uppercase" >Finalizar compra</Link>}
     </div>
     </div>
   )
 }
+export default ItemCount;

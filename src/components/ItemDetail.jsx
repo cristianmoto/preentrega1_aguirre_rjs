@@ -1,8 +1,16 @@
 
-import { ItemCount } from "./ItemCount"
+import { useContext } from "react";
+import ItemCount from "./ItemCount";
+import { CartContext } from "./context/CartContext";
 
 
 export const ItemDetail = ({item}) => {
+  const {addItem} = useContext(CartContext);
+
+  const onAdd = (cantidad) => {
+      addItem(item, cantidad);
+      console.log("Agregaste: " + cantidad + " productos!");
+  }
   return (
    
       <article className="flex   bg-slate-200 col-md-3 text-center shadow-lg border-2 rounded-md ">
@@ -20,7 +28,7 @@ export const ItemDetail = ({item}) => {
           <h3 className=" text-gray-800 font-semibold text-2xl px-5 py-2" >Unidades: {item.stock}</h3>
           <h3 className=" text-gray-800 font-semibold text-2xl px-5 py-2">Estado: {item.estado}</h3>
           <h2 className=" text-gray-950 font-semibold  text-3xl px-5 py-2">Precio:$ {item.precio}</h2>
-          <ItemCount stock={item.stock} />
+          <ItemCount stock={item.stock} onAdd={onAdd} />
         </div>
         </div>
       </article>
