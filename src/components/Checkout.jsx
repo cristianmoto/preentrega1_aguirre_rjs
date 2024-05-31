@@ -84,7 +84,7 @@ const Checkout = () => {
                                 </tr>
                             ))}
                             <tr className="text-center justify-between">
-                                <td colSpan={2} className="ttext-xl px-6 pl-0 sm:text-3xl"><b>Total</b></td>
+                                <td colSpan={2} className="text-xl px-6 pl-0 sm:text-3xl"><b>Total</b></td>
                                 <td className="text-xl px-6 pl-0 sm:text-3xl"><b>-${getSumProducts()}-</b></td>
                             </tr>
                         </tbody>
